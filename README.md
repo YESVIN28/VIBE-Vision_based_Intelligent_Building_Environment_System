@@ -1,8 +1,7 @@
-# VIBE (Vision based Intelligent Building Environment System ) 
 <h1 align="center">VIBE</h1>  
 <br />
 <p align="center">
-  <strong>Vision-based Intelligent Building Environment</strong><br>
+  <strong>Vision-based Intelligent Building Environment System</strong><br>
   Real-time Crowd-Aware Smart Environmental Automation
 </p>
 
@@ -17,8 +16,10 @@
 ---
 
 <p align="center">
-  <img src="https://i.imgur.com/HowF6aM.png" width="450">
+  <img src="https://github.com/YESVIN28/VIBE-Vision_based_Intelligent_Building_Environment_System/blob/main/generated-svg-image.svg?raw=true" width="500" />
 </p>
+
+
 
 ---
 
