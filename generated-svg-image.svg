@@ -1,0 +1,144 @@
+<svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4757;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#48CAE4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0077B6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glowing effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop shadow -->
+    <filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2" result="offset" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="45" fill="url(#primaryGradient)" opacity="0.1"/>
+  
+  <!-- Main building/environment container -->
+  <rect x="25" y="35" width="70" height="50" rx="8" fill="url(#primaryGradient)" opacity="0.8" filter="url(#dropshadow)"/>
+  
+  <!-- IoT sensors represented as small circles -->
+  <circle cx="35" cy="45" r="3" fill="#FFD700" filter="url(#glow)"/>
+  <circle cx="85" cy="45" r="3" fill="#FFD700" filter="url(#glow)"/>
+  <circle cx="35" cy="75" r="3" fill="#FFD700" filter="url(#glow)"/>
+  <circle cx="85" cy="75" r="3" fill="#FFD700" filter="url(#glow)"/>
+  
+  <!-- Computer vision camera -->
+  <rect x="52" y="25" width="16" height="12" rx="2" fill="url(#secondaryGradient)" filter="url(#dropshadow)"/>
+  <circle cx="60" cy="31" r="4" fill="#ffffff" opacity="0.9"/>
+  <circle cx="60" cy="31" r="2" fill="#000000"/>
+  
+  <!-- People/crowd detection visualization -->
+  <g opacity="0.7">
+    <!-- Person 1 -->
+    <circle cx="45" cy="55" r="3" fill="#FFFFFF"/>
+    <rect x="43" y="58" width="4" height="8" rx="2" fill="#FFFFFF"/>
+    
+    <!-- Person 2 -->
+    <circle cx="55" cy="55" r="3" fill="#FFFFFF"/>
+    <rect x="53" y="58" width="4" height="8" rx="2" fill="#FFFFFF"/>
+    
+    <!-- Person 3 -->
+    <circle cx="65" cy="55" r="3" fill="#FFFFFF"/>
+    <rect x="63" y="58" width="4" height="8" rx="2" fill="#FFFFFF"/>
+    
+    <!-- Person 4 -->
+    <circle cx="75" cy="55" r="3" fill="#FFFFFF"/>
+    <rect x="73" y="58" width="4" height="8" rx="2" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Environmental control elements -->
+  <!-- Fan/ventilation -->
+  <g transform="translate(45, 40)">
+    <circle cx="0" cy="0" r="6" fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+    <path d="M-4,-4 L4,4 M-4,4 L4,-4" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+  </g>
+  
+  <!-- Temperature indicator -->
+  <g transform="translate(75, 40)">
+    <rect x="-2" y="-6" width="4" height="10" rx="2" fill="url(#secondaryGradient)" opacity="0.8"/>
+    <circle cx="0" cy="6" r="3" fill="url(#secondaryGradient)" opacity="0.8"/>
+  </g>
+  
+  <!-- Data flow/connection lines -->
+  <path d="M 35 45 Q 50 35 65 45" stroke="url(#accentGradient)" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="2,2">
+    <animate attributeName="stroke-dashoffset" values="0;4" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- ML/AI brain representation -->
+  <g transform="translate(60, 70)">
+    <circle cx="0" cy="0" r="8" fill="none" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.7"/>
+    <path d="M-6,-2 Q-3,-6 0,-2 Q3,-6 6,-2" stroke="url(#primaryGradient)" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M-6,2 Q-3,6 0,2 Q3,6 6,2" stroke="url(#primaryGradient)" stroke-width="2" fill="none" opacity="0.7"/>
+  </g>
+  
+  <!-- Project Title -->
+  <text x="120" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2C3E50">
+    Smart Environmental
+  </text>
+  <text x="120" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2C3E50">
+    Automation
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="120" y="70" font-family="Arial, sans-serif" font-size="11" fill="#7F8C8D">
+    Real-Time Crowd-Aware System
+  </text>
+  <text x="120" y="85" font-family="Arial, sans-serif" font-size="10" fill="#7F8C8D">
+    IoT • Computer Vision • Machine Learning
+  </text>
+  
+  <!-- Technology badges -->
+  <rect x="120" y="95" width="35" height="15" rx="7" fill="url(#primaryGradient)" opacity="0.8"/>
+  <text x="137" y="105" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">YOLOv8</text>
+  
+  <rect x="160" y="95" width="35" height="15" rx="7" fill="url(#accentGradient)" opacity="0.8"/>
+  <text x="177" y="105" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">ResNet</text>
+  
+  <rect x="200" y="95" width="35" height="15" rx="7" fill="url(#secondaryGradient)" opacity="0.8"/>
+  <text x="217" y="105" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">IoT</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="350" cy="30" r="2" fill="url(#primaryGradient)" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="370" cy="45" r="1.5" fill="url(#accentGradient)" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="360" cy="60" r="1" fill="url(#secondaryGradient)" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Performance indicator -->
+  <text x="315" y="85" font-family="Arial, sans-serif" font-size="9" fill="#27AE60" font-weight="bold">91.2% Accuracy</text>
+  <text x="315" y="95" font-family="Arial, sans-serif" font-size="9" fill="#E74C3C" font-weight="bold">28.5% Energy Savings</text>
+  <text x="315" y="105" font-family="Arial, sans-serif" font-size="9" fill="#3498DB" font-weight="bold">45 FPS Real-time</text>
+</svg>
