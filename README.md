@@ -59,10 +59,10 @@ It reduces energy consumption by up to **28.5%**, maintains thermal comfort with
 
 ---
 
-## 📊 System Architecture
+## 📊 System Workflow
 
 <p align="center">
-  <img src="https://github.com/YESVIN28/VIBE-Vision_based_Intelligent_Building_Environment_System/blob/main/svgviewer-output.svg?raw=true" width="500" />
+  <img src="https://github.com/YESVIN28/VIBE-Vision_based_Intelligent_Building_Environment_System/blob/main/IMAGE_FLOW.PNG?raw=true" width="1000" />
 </p>
 
 ---
