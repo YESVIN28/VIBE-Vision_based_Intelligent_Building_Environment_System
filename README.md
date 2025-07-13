@@ -129,6 +129,7 @@
 ```bash```
 ### Clone the repository
 git clone https://github.com/YESVIN28/VIBE-Vision_based_Intelligent_Building_Environment_System.git
+
 cd VIBE-Vision_based_Intelligent_Building_Environment_System
 
 ### Install dependencies
