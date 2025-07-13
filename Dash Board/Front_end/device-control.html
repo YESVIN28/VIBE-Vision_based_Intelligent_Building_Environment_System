@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Device Control System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header h1 {
+            color: #4a5568;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .header h1 i {
+            color: #667eea;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #4a5568;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: #e53e3e;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            display: grid;
+            gap: 30px;
+        }
+
+        .section-title {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .device-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .device-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .device-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .device-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .device-icon {
+            font-size: 1.8rem;
+            padding: 10px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .power-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #e2e8f0;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .power-switch.on {
+            background: #48bb78;
+        }
+
+        .power-switch::after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            background: white;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .power-switch.on::after {
+            transform: translateX(30px);
+        }
+
+        .device-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #e53e3e;
+        }
+
+        .status-indicator.active {
+            background: #48bb78;
+        }
+
+        .controls-section {
+            margin-top: 20px;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        .control-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .slider-container {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #e2e8f0;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-value {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            font-size: 0.85rem;
+            color: #718096;
+        }
+
+        .current-value {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .add-device-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 200px;
+        }
+
+        .add-device-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .add-device-card i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.7;
+        }
+
+        .add-device-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-header h2 {
+            color: #4a5568;
+        }
+
+        .close {
+            font-size: 28px;
+            cursor: pointer;
+            color: #a0aec0;
+        }
+
+        .close:hover {
+            color: #4a5568;
+        }
+
+        .device-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .device-type {
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .device-type:hover,
+        .device-type.selected {
+            border-color: #667eea;
+            background: #f7fafc;
+        }
+
+        .device-type i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .devices-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-home"></i> Smart Device Control</h1>
+            <nav class="nav-links">
+                <a href="/" class="nav-link"><i class="fas fa-users"></i> Crowd Management</a>
+                <a href="/device-control.html" class="nav-link active"><i class="fas fa-home"></i> Device Control</a>
+            </nav>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-primary">Login</button>
+                <button id="logout-btn" class="btn btn-danger" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h2 class="section-title">
+                <i class="fas fa-microchip"></i>
+                Connected Devices
+            </h2>
+
+            <div class="devices-grid" id="devices-grid">
+                <!-- Fan Device -->
+                <div class="device-card" data-device="fan">
+                    <div class="device-header">
+                        <div class="device-title">
+                            <div class="device-icon">
+                                <i class="fas fa-fan"></i>
+                            </div>
+                            <span>Ceiling Fan</span>
+                        </div>
+                        <div class="power-switch" data-device="fan"></div>
+                    </div>
+                    <div class="device-status">
+                        <div class="status-indicator"></div>
+                        <span class="status-text">Offline</span>
+                    </div>
+                    <div class="controls-section">
+                        <div class="control-group">
+                            <label class="control-label">Speed Control</label>
+                            <div class="slider-container">
+                                <input type="range" class="slider" min="0" max="100" value="0" data-control="speed">
+                                <div class="slider-value">
+                                    <span>0%</span>
+                                    <span class="current-value">0%</span>
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Light Device -->
+                <div class="device-card" data-device="light">
+                    <div class="device-header">
+                        <div class="device-title">
+                            <div class="device-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span>Smart Light</span>
+                        </div>
+                        <div class="power-switch" data-device="light"></div>
+                    </div>
+                    <div class="device-status">
+                        <div class="status-indicator"></div>
+                        <span class="status-text">Offline</span>
+                    </div>
+                    <div class="controls-section">
+                        <div class="control-group">
+                            <label class="control-label">Brightness</label>
+                            <div class="slider-container">
+                                <input type="range" class="slider" min="0" max="100" value="0" data-control="brightness">
+                                <div class="slider-value">
+                                    <span>0%</span>
+                                    <span class="current-value">0%</span>
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TV Device -->
+                <div class="device-card" data-device="tv">
+                    <div class="device-header">
+                        <div class="device-title">
+                            <div class="device-icon">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <span>Smart TV</span>
+                        </div>
+                        <div class="power-switch" data-device="tv"></div>
+                    </div>
+                    <div class="device-status">
+                        <div class="status-indicator"></div>
+                        <span class="status-text">Offline</span>
+                    </div>
+                    <div class="controls-section">
+                        <div class="control-group">
+                            <label class="control-label">Volume</label>
+                            <div class="slider-container">
+                                <input type="range" class="slider" min="0" max="100" value="0" data-control="volume">
+                                <div class="slider-value">
+                                    <span>0%</span>
+                                    <span class="current-value">0%</span>
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Device Card -->
+                <div class="device-card add-device-card" id="add-device-btn">
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Add New Device</h3>
+                    <p>Connect a new smart device</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Made with 💡 by Yesvin Veluchamy for Summer Internship &copy; 2025</p>
+        </footer>
+    </div>
+
+    <!-- Add Device Modal -->
+    <div id="addDeviceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Device</h2>
+                <span class="close">&times;</span>
+            </div>
+            
+            <div class="device-types">
+                <div class="device-type" data-type="fan">
+                    <i class="fas fa-fan"></i>
+                    <div>Fan</div>
+                </div>
+                <div class="device-type" data-type="light">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>Light</div>
+                </div>
+                <div class="device-type" data-type="tv">
+                    <i class="fas fa-tv"></i>
+                    <div>TV</div>
+                </div>
+                <div class="device-type" data-type="ac">
+                    <i class="fas fa-snowflake"></i>
+                    <div>AC</div>
+                </div>
+            </div>
+
+            <form id="deviceForm">
+                <div class="form-group">
+                    <label for="deviceName">Device Name</label>
+                    <input type="text" id="deviceName" name="deviceName" placeholder="Enter device name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deviceRoom">Room</label>
+                    <select id="deviceRoom" name="deviceRoom" required>
+                        <option value="">Select Room</option>
+                        <option value="living-room">Living Room</option>
+                        <option value="bedroom">Bedroom</option>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="bathroom">Bathroom</option>
+                        <option value="office">Office</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Add Device</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Global variables for device management
+        let devices = {};
+        let selectedDeviceType = '';
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeEventListeners();
+            loadDevices();
+            setInterval(loadDevices, 2000); // Poll backend every 2 seconds for real-time sync
+        });
+
+        function initializeEventListeners() {
+            // Power switch toggles
+            document.querySelectorAll('.power-switch').forEach(switchEl => {
+                switchEl.addEventListener('click', function() {
+                    const deviceId = this.closest('.device-card').getAttribute('data-device');
+                    sendDeviceState(deviceId, !this.classList.contains('on'));
+                });
+            });
+
+            // Slider controls
+            document.querySelectorAll('.slider').forEach(slider => {
+                slider.addEventListener('change', function() {
+                    const value = this.value;
+                    const deviceCard = this.closest('.device-card');
+                    const deviceId = deviceCard.getAttribute('data-device');
+                    const controlType = this.getAttribute('data-control');
+                    sendControlUpdate(deviceId, controlType, value);
+                });
+            });
+
+            // Add device modal
+            const modal = document.getElementById('addDeviceModal');
+            const addBtn = document.getElementById('add-device-btn');
+            const closeBtn = document.querySelector('.close');
+
+            addBtn.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                resetModal();
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    resetModal();
+                }
+            });
+
+            // Device type selection
+            document.querySelectorAll('.device-type').forEach(type => {
+                type.addEventListener('click', function() {
+                    document.querySelectorAll('.device-type').forEach(t => t.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedDeviceType = this.getAttribute('data-type');
+                });
+            });
+
+            // Form submission
+            document.getElementById('deviceForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                addNewDevice();
+            });
+
+            // Auth buttons
+            document.getElementById('login-btn').addEventListener('click', () => {
+                // Simulate login - in real implementation, this would redirect to login page
+                document.getElementById('login-btn').style.display = 'none';
+                document.getElementById('logout-btn').style.display = 'block';
+            });
+
+            document.getElementById('logout-btn').addEventListener('click', () => {
+                document.getElementById('login-btn').style.display = 'block';
+                document.getElementById('logout-btn').style.display = 'none';
+            });
+        }
+
+        function sendDeviceState(deviceId, isOn) {
+            fetch('/api/device/toggle', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ device: deviceId, state: isOn })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // No UI update here! UI will update on next poll from backend.
+                console.log('Device state updated:', data);
+            })
+            .catch(error => {
+                console.error('Error updating device state:', error);
+            });
+        }
+
+        function sendControlUpdate(deviceId, controlType, value) {
+            fetch('/api/device/control', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ device: deviceId, control: controlType, value: parseInt(value) })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // No UI update here! UI will update on next poll from backend.
+                console.log('Device control updated:', data);
+            })
+            .catch(error => {
+                console.error('Error updating device control:', error);
+            });
+        }
+
+        function addNewDevice() {
+            if (!selectedDeviceType) {
+                alert('Please select a device type');
+                return;
+            }
+            const deviceName = document.getElementById('deviceName').value;
+            const deviceRoom = document.getElementById('deviceRoom').value;
+            if (!deviceName || !deviceRoom) {
+                alert('Please fill in all fields');
+                return;
+            }
+            fetch('/api/device/add', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ type: selectedDeviceType, name: deviceName, room: deviceRoom })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('addDeviceModal').style.display = 'none';
+                resetModal();
+                // UI will update on next poll from backend
+            })
+            .catch(error => {
+                console.error('Error adding new device:', error);
+            });
+        }
+
+        function resetModal() {
+            document.getElementById('deviceForm').reset();
+            document.querySelectorAll('.device-type').forEach(t => t.classList.remove('selected'));
+            selectedDeviceType = '';
+        }
+
+        function loadDevices() {
+            fetch('http://192.168.137.143:8000/api/devices')
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    updateDevicesUI(data.devices);
+                }
+            })
+            .catch(error => {
+                console.error('Error loading devices:', error);
+            });
+        }
+
+        // Replace the updateDevicesUI function with this updated version
+function updateDevicesUI(devices) {
+    const devicesGrid = document.getElementById('devices-grid');
+    
+    // Update existing device cards and create new ones
+    for (const [deviceId, deviceInfo] of Object.entries(devices)) {
+        let existingCard = devicesGrid.querySelector(`[data-device="${deviceId}"]`);
+        
+        if (existingCard && !existingCard.classList.contains('add-device-card')) {
+            // Update existing card
+            updateSingleDeviceUI(existingCard, deviceInfo);
+        } else if (!existingCard) {
+            // Create new card for devices not already present
+            createDeviceCard(deviceId, deviceInfo);
+        }
+    }
+    
+    // Remove cards for devices that no longer exist in backend
+    devicesGrid.querySelectorAll('.device-card:not(.add-device-card)').forEach(card => {
+        const deviceId = card.getAttribute('data-device');
+        if (!devices[deviceId]) {
+            card.remove();
+        }
+    });
+}
+
+// Replace the createDeviceCard function with this updated version
+function createDeviceCard(deviceId, deviceInfo) {
+    const devicesGrid = document.getElementById('devices-grid');
+    
+    // Don't duplicate cards
+    if (devicesGrid.querySelector(`[data-device="${deviceId}"]`)) return;
+
+    // Card container
+    const card = document.createElement('div');
+    card.className = 'device-card';
+    card.setAttribute('data-device', deviceId);
+
+    // Device icon mapping
+    const iconMap = {
+        'fan': 'fa-fan',
+        'light': 'fa-lightbulb', 
+        'tv': 'fa-tv',
+        'ac': 'fa-snowflake'
+    };
+    const iconClass = iconMap[deviceInfo.type] || 'fa-question';
+
+    // Device header (consistent for all devices)
+    card.innerHTML = `
+        <div class="device-header">
+            <div class="device-title">
+                <div class="device-icon">
+                    <i class="fas ${iconClass}"></i>
+                </div>
+                <span>${deviceInfo.name || deviceId}</span>
+            </div>
+            <div class="power-switch" data-device="${deviceId}"></div>
+        </div>
+        <div class="device-status">
+            <div class="status-indicator"></div>
+            <span class="status-text">Offline</span>
+        </div>
+        <div class="controls-section"></div>
+    `;
+
+    // Controls section - standardized for all device types
+    const controlsSection = card.querySelector('.controls-section');
+    const controlsConfig = getControlsConfig(deviceInfo.type, deviceInfo);
+    
+    controlsSection.innerHTML = controlsConfig.html;
+
+    // Insert before the add-device card
+    const addDeviceCard = devicesGrid.querySelector('.add-device-card');
+    devicesGrid.insertBefore(card, addDeviceCard);
+
+    // Add event listeners
+    addDeviceEventListeners(card, deviceId);
+
+    // Initial UI update
+    updateSingleDeviceUI(card, deviceInfo);
+}
+
+// New helper function for consistent control configurations
+function getControlsConfig(deviceType, deviceInfo) {
+    const configs = {
+        'fan': {
+            html: `
+                <div class="control-group">
+                    <label class="control-label">Speed Control</label>
+                    <div class="slider-container">
+                        <input type="range" class="slider" min="0" max="100" value="${deviceInfo.speed || 0}" data-control="speed">
+                        <div class="slider-value">
+                            <span>0%</span>
+                            <span class="current-value">${deviceInfo.speed || 0}%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        'light': {
+            html: `
+                <div class="control-group">
+                    <label class="control-label">Brightness</label>
+                    <div class="slider-container">
+                        <input type="range" class="slider" min="0" max="100" value="${deviceInfo.brightness || 0}" data-control="brightness">
+                        <div class="slider-value">
+                            <span>0%</span>
+                            <span class="current-value">${deviceInfo.brightness || 0}%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        'tv': {
+            html: `
+                <div class="control-group">
+                    <label class="control-label">Volume</label>
+                    <div class="slider-container">
+                        <input type="range" class="slider" min="0" max="100" value="${deviceInfo.volume || 0}" data-control="volume">
+                        <div class="slider-value">
+                            <span>0%</span>
+                            <span class="current-value">${deviceInfo.volume || 0}%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        'ac': {
+            html: `
+                <div class="control-group">
+                    <label class="control-label">Temperature</label>
+                    <div class="slider-container">
+                        <input type="range" class="slider" min="16" max="30" value="${deviceInfo.temperature || 20}" data-control="temperature">
+                        <div class="slider-value">
+                            <span>16°C</span>
+                            <span class="current-value">${deviceInfo.temperature || 20}°C</span>
+                            <span>30°C</span>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+    };
+    
+    return configs[deviceType] || {
+        html: `<div class="control-group"><p>No controls available</p></div>`
+    };
+}
+
+// New helper function for consistent event listener attachment
+function addDeviceEventListeners(card, deviceId) {
+    // Power switch event
+    const powerSwitch = card.querySelector('.power-switch');
+    if (powerSwitch) {
+        powerSwitch.addEventListener('click', function() {
+            sendDeviceState(deviceId, !this.classList.contains('on'));
+        });
+    }
+
+    // Slider events
+    card.querySelectorAll('.slider').forEach(slider => {
+        slider.addEventListener('input', function() {
+            // Update display value immediately for responsive UI
+            const value = this.value;
+            const controlType = this.getAttribute('data-control');
+            const currentValueSpan = this.parentElement.querySelector('.current-value');
+            
+            if (currentValueSpan) {
+                if (controlType === 'temperature') {
+                    currentValueSpan.textContent = value + '°C';
+                } else {
+                    currentValueSpan.textContent = value + '%';
+                }
+            }
+        });
+        
+        slider.addEventListener('change', function() {
+            const value = this.value;
+            const controlType = this.getAttribute('data-control');
+            sendControlUpdate(deviceId, controlType, value);
+        });
+    });
+}
+
+// Updated updateSingleDeviceUI function for better consistency
+function updateSingleDeviceUI(card, deviceInfo) {
+    // Power switch state
+    const powerSwitch = card.querySelector('.power-switch');
+    if (powerSwitch) {
+        if (deviceInfo.state) {
+            powerSwitch.classList.add('on');
+            powerSwitch.classList.remove('off');
+        } else {
+            powerSwitch.classList.remove('on');
+            powerSwitch.classList.add('off');
+        }
+    }
+    
+    // Status indicator
+    const statusIndicator = card.querySelector('.status-indicator');
+    const statusText = card.querySelector('.status-text');
+    if (statusIndicator && statusText) {
+        if (deviceInfo.state) {
+            statusIndicator.classList.add('active');
+            statusText.textContent = 'Online';
+        } else {
+            statusIndicator.classList.remove('active');
+            statusText.textContent = 'Offline';
+        }
+    }
+    
+    // Update all sliders and their display values
+    card.querySelectorAll('.slider').forEach(slider => {
+        const controlType = slider.getAttribute('data-control');
+        if (deviceInfo[controlType] !== undefined) {
+            slider.value = deviceInfo[controlType];
+            
+            const currentValueSpan = slider.parentElement.querySelector('.current-value');
+            if (currentValueSpan) {
+                if (controlType === 'temperature') {
+                    currentValueSpan.textContent = deviceInfo[controlType] + '°C';
+                } else {
+                    currentValueSpan.textContent = deviceInfo[controlType] + '%';
+                }
+            }
+        }
+    });
+}
+    </script>
+</body>
+</html>

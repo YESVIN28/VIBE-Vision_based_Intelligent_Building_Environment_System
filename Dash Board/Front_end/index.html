@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crowd Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1><i class="fas fa-users"></i> Crowd Management System</h1>
+      <div class="auth-buttons">
+        <button id="login-btn" class="btn btn-primary">Login</button>
+        <button id="logout-btn" class="btn btn-danger">Logout</button>
+      </div>
+      <nav class="nav-links">
+        <a href="/" class="nav-link active"><i class="fas fa-users"></i> Crowd Management</a>
+        <a href="/device-control.html" class="nav-link"><i class="fas fa-lightbulb"></i> Device Control</a>
+      </nav>
+    </header>
+
+    <div class="login-modal" id="login-modal">
+      <div class="modal-content">
+        <span class="close-modal">×</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="main-content" id="main-content">
+      <section class="control-panel">
+        <h2><i class="fas fa-sliders-h"></i> Control Panel</h2>
+        <div class="control-buttons">
+          <button id="start-detection" class="btn btn-success">
+            <i class="fas fa-play"></i> Start Detection
+          </button>
+          <button id="stop-detection" class="btn btn-danger">
+            <i class="fas fa-stop"></i> Stop Detection
+          </button>
+        </div>
+        <div class="system-status">
+          <span class="status-label">System Status:</span>
+          <span id="system-status" class="status-badge stopped">Stopped</span>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon people-icon"><i class="fas fa-user-friends"></i></div>
+            <div class="stat-info">
+              <h3>People Count</h3>
+              <p id="people-count">0</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon density-icon"><i class="fas fa-chart-area"></i></div>
+            <div class="stat-info">
+              <h3>Density</h3>
+              <p id="density">0.00 ppl/m²</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon crowd-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="stat-info">
+              <h3>Crowd Level</h3>
+              <p id="crowd-level">Unknown (0%)</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon device-icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="stat-info">
+              <h3>Device Status</h3>
+              <p id="device-status">OFF</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-container">
+          <h2><i class="fas fa-video"></i> Live Feed</h2>
+          <div class="video-wrapper">
+            <img id="video-feed" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNhbWVyYSBGZWVkIE9mZmxpbmU8L3RleHQ+Cjwvc3ZnPg==" alt="Live camera feed" />
+            <button id="fullscreen-btn" class="fullscreen-btn">
+              <i class="fas fa-expand"></i>
+            </button>
+          </div>
+          <div class="video-stats">
+            <div class="video-stat">
+              <span>FPS:</span> 
+              <span id="fps" class="stat-value">0.0</span>
+            </div>
+            <div class="video-stat">
+              <span>Processing Time:</span> 
+              <span id="processing-time" class="stat-value">0.00 ms</span>
+            </div>
+            <div class="video-stat">
+              <span>Frame Count:</span> 
+              <span id="frame-count" class="stat-value">0</span>
+            </div>
+            <div class="video-stat">
+              <span>Active Tracks:</span> 
+              <span id="active-tracks" class="stat-value">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tracking-info">
+          <h2><i class="fas fa-id-card"></i> Tracking Information</h2>
+          <div class="tracking-summary">
+            <div class="summary-item">
+              <span>Total Tracked IDs:</span>
+              <span id="total-tracked" class="summary-value">0</span>
+            </div>
+            <div class="summary-item">
+              <span>Active Tracks:</span>
+              <span id="active-tracks-summary" class="summary-value">0</span>
+            </div>
+          </div>
+          <div class="tracking-table-container">
+            <table class="tracking-table">
+              <thead>
+                <tr>
+                  <th>Track ID</th>
+                  <th>Position</th>
+                  <th>Confidence</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tracking-data">
+                <tr>
+                  <td colspan="4" class="no-data">No tracking data available</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="system-info">
+          <h2><i class="fas fa-info-circle"></i> System Information</h2>
+          <div class="system-details">
+            <div class="detail-item">
+              <span>Processing Device:</span>
+              <span id="processing-device">Unknown</span>
+            </div>
+            <div class="detail-item">
+              <span>YOLO Model:</span>
+              <span id="yolo-model">yolov8n.pt</span>
+            </div>
+            <div class="detail-item">
+              <span>ResNet Enabled:</span>
+              <span id="resnet-enabled">Unknown</span>
+            </div>
+            <div class="detail-item">
+              <span>Camera FOV:</span>
+              <span id="camera-fov">100 m²</span>
+            </div>
+            <div class="detail-item">
+              <span>Density Threshold:</span>
+              <span id="density-threshold">0.05 ppl/m²</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made with 🔥 by Yesvin Veluchamy for Summer Intern © 2025</p>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
