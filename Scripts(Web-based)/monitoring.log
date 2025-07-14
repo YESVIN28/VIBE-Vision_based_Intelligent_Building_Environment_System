@@ -1,0 +1,438 @@
+2025-05-24 14:21:20,048 - INFO - Starting Density Monitor...
+2025-05-24 14:21:20,048 - INFO - Loading YOLO model on cpu...
+2025-05-24 14:21:20,261 - INFO - ✅ YOLO model loaded on CPU
+2025-05-24 14:21:20,261 - INFO - Skipping model compilation to avoid Dynamo issues
+2025-05-24 14:21:20,261 - INFO - Initializing DeepSort tracker...
+2025-05-24 14:21:20,487 - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-05-24 14:21:20,487 - INFO - - gpu enabled: False
+2025-05-24 14:21:20,487 - INFO - - half precision: False
+2025-05-24 14:21:20,487 - INFO - - max batch size: 16
+2025-05-24 14:21:20,487 - INFO - - expects BGR: True
+2025-05-24 14:21:20,563 - INFO - DeepSort Tracker initialised
+2025-05-24 14:21:20,564 - INFO - - max age: 50
+2025-05-24 14:21:20,564 - INFO - - appearance threshold: 0.4
+2025-05-24 14:21:20,564 - INFO - - nms threshold: OFF
+2025-05-24 14:21:20,564 - INFO - - max num of appearance features: 100
+2025-05-24 14:21:20,564 - INFO - - overriding track class : No
+2025-05-24 14:21:20,564 - INFO - - today given : No
+2025-05-24 14:21:20,564 - INFO - - in-build embedder : Yes
+2025-05-24 14:21:20,564 - INFO - - polygon detections : No
+2025-05-24 14:21:20,564 - INFO - ✅ DeepSort tracker initialized
+2025-05-24 14:21:20,564 - WARNING - CSONet weights not found: csonet_occlusion.pth
+2025-05-24 14:21:20,564 - INFO - ✅ CSV logging initialized
+2025-05-24 14:21:20,564 - INFO - Opening video source: 0
+2025-05-24 14:21:24,664 - INFO - 🚀 Starting occlusion-aware monitoring...
+2025-05-24 14:21:57,100 - INFO - Quit command received
+2025-05-24 14:21:57,100 - INFO - Cleaning up resources...
+2025-05-24 14:21:57,230 - INFO - Monitoring stopped
+2025-05-24 19:47:30,899 - INFO - Starting Density Monitor...
+2025-05-24 19:47:30,900 - INFO - Loading YOLO model on cpu...
+2025-05-24 19:47:31,116 - INFO - ✅ YOLO model loaded on CPU
+2025-05-24 19:47:31,116 - INFO - Skipping model compilation to avoid Dynamo issues
+2025-05-24 19:47:31,116 - INFO - Initializing DeepSort tracker...
+2025-05-24 19:47:31,349 - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-05-24 19:47:31,349 - INFO - - gpu enabled: False
+2025-05-24 19:47:31,349 - INFO - - half precision: False
+2025-05-24 19:47:31,349 - INFO - - max batch size: 16
+2025-05-24 19:47:31,349 - INFO - - expects BGR: True
+2025-05-24 19:47:31,417 - INFO - DeepSort Tracker initialised
+2025-05-24 19:47:31,417 - INFO - - max age: 50
+2025-05-24 19:47:31,417 - INFO - - appearance threshold: 0.4
+2025-05-24 19:47:31,417 - INFO - - nms threshold: OFF
+2025-05-24 19:47:31,417 - INFO - - max num of appearance features: 100
+2025-05-24 19:47:31,417 - INFO - - overriding track class : No
+2025-05-24 19:47:31,417 - INFO - - today given : No
+2025-05-24 19:47:31,417 - INFO - - in-build embedder : Yes
+2025-05-24 19:47:31,417 - INFO - - polygon detections : No
+2025-05-24 19:47:31,417 - INFO - ✅ DeepSort tracker initialized
+2025-05-24 19:47:31,417 - INFO - Loading CSONet model...
+2025-05-24 19:47:31,443 - WARNING - ⚠️ CSONet loading failed, using YOLO-only mode: PytorchStreamReader failed locating file constants.pkl: file not found
+2025-05-24 19:47:31,443 - INFO - ✅ CSV logging initialized
+2025-05-24 19:47:31,443 - INFO - Opening video source: 0
+2025-05-24 19:47:35,272 - INFO - 🚀 Starting occlusion-aware monitoring...
+2025-05-24 19:48:09,006 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:09,024 - INFO - Processed 100 frames
+2025-05-24 19:48:09,622 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:10,420 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:11,046 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:11,046 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:11,636 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:12,641 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:13,259 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:13,843 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:14,442 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:15,031 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:18,110 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:19,064 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:19,664 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:20,242 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:20,851 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:21,485 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:22,214 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:22,814 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:23,511 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:24,198 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:24,839 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:25,430 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:26,037 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:26,651 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:27,250 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:27,827 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:28,428 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:29,133 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:29,809 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:30,599 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-24 19:48:30,620 - INFO - Quit command received
+2025-05-24 19:48:30,621 - INFO - Cleaning up resources...
+2025-05-24 19:48:30,873 - INFO - Monitoring stopped
+2025-05-24 22:30:12,174 - INFO - Starting Density Monitor...
+2025-05-24 22:30:12,175 - INFO - Loading YOLO model on cpu...
+2025-05-24 22:30:12,398 - INFO - ✅ YOLO model loaded on CPU
+2025-05-24 22:30:12,398 - INFO - Skipping model compilation to avoid Dynamo issues
+2025-05-24 22:30:12,398 - INFO - Initializing DeepSort tracker...
+2025-05-24 22:30:12,583 - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-05-24 22:30:12,583 - INFO - - gpu enabled: False
+2025-05-24 22:30:12,583 - INFO - - half precision: False
+2025-05-24 22:30:12,583 - INFO - - max batch size: 16
+2025-05-24 22:30:12,583 - INFO - - expects BGR: True
+2025-05-24 22:30:12,662 - INFO - DeepSort Tracker initialised
+2025-05-24 22:30:12,662 - INFO - - max age: 50
+2025-05-24 22:30:12,662 - INFO - - appearance threshold: 0.4
+2025-05-24 22:30:12,662 - INFO - - nms threshold: OFF
+2025-05-24 22:30:12,662 - INFO - - max num of appearance features: 100
+2025-05-24 22:30:12,662 - INFO - - overriding track class : No
+2025-05-24 22:30:12,662 - INFO - - today given : No
+2025-05-24 22:30:12,662 - INFO - - in-build embedder : Yes
+2025-05-24 22:30:12,662 - INFO - - polygon detections : No
+2025-05-24 22:30:12,662 - INFO - ✅ DeepSort tracker initialized
+2025-05-24 22:30:12,662 - INFO - Loading CSONet model...
+2025-05-24 22:30:12,720 - WARNING - ⚠️ CSONet loading failed, using YOLO-only mode: PytorchStreamReader failed locating file constants.pkl: file not found
+2025-05-24 22:30:12,720 - INFO - ✅ CSV logging initialized
+2025-05-24 22:30:12,720 - INFO - Opening video source: 0
+2025-05-24 22:30:14,896 - INFO - 🚀 Starting occlusion-aware monitoring...
+2025-05-24 22:30:28,011 - INFO - Quit command received
+2025-05-24 22:30:28,012 - INFO - Cleaning up resources...
+2025-05-24 22:30:28,109 - INFO - Monitoring stopped
+2025-05-25 00:09:32,927 - INFO - Starting Density Monitor...
+2025-05-25 00:09:32,927 - INFO - Loading YOLO model on cpu...
+2025-05-25 00:09:33,171 - INFO - ✅ YOLO model loaded on CPU
+2025-05-25 00:09:33,171 - INFO - Skipping model compilation to avoid Dynamo issues
+2025-05-25 00:09:33,171 - INFO - Initializing DeepSort tracker...
+2025-05-25 00:09:33,422 - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-05-25 00:09:33,422 - INFO - - gpu enabled: False
+2025-05-25 00:09:33,422 - INFO - - half precision: False
+2025-05-25 00:09:33,422 - INFO - - max batch size: 16
+2025-05-25 00:09:33,422 - INFO - - expects BGR: True
+2025-05-25 00:09:33,501 - INFO - DeepSort Tracker initialised
+2025-05-25 00:09:33,502 - INFO - - max age: 50
+2025-05-25 00:09:33,502 - INFO - - appearance threshold: 0.4
+2025-05-25 00:09:33,502 - INFO - - nms threshold: OFF
+2025-05-25 00:09:33,502 - INFO - - max num of appearance features: 100
+2025-05-25 00:09:33,502 - INFO - - overriding track class : No
+2025-05-25 00:09:33,502 - INFO - - today given : No
+2025-05-25 00:09:33,502 - INFO - - in-build embedder : Yes
+2025-05-25 00:09:33,502 - INFO - - polygon detections : No
+2025-05-25 00:09:33,502 - INFO - ✅ DeepSort tracker initialized
+2025-05-25 00:09:33,502 - INFO - Loading CSONet model...
+2025-05-25 00:09:33,517 - WARNING - ⚠️ CSONet loading failed, using YOLO-only mode: PytorchStreamReader failed locating file constants.pkl: file not found
+2025-05-25 00:09:33,517 - INFO - ✅ CSV logging initialized
+2025-05-25 00:09:33,517 - INFO - Opening video source: 0
+2025-05-25 00:09:35,491 - INFO - 🚀 Starting occlusion-aware monitoring...
+2025-05-25 00:09:40,442 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:41,234 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:41,998 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:42,777 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:43,576 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:44,359 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:45,134 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:45,905 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:46,695 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:47,457 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:48,271 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:49,055 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:49,820 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:50,608 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:51,382 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:52,168 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:52,945 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:53,731 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:54,519 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:55,129 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:55,131 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:55,836 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:55,838 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:56,534 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:56,536 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:57,226 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:57,229 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:57,942 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:57,944 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:58,600 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:58,602 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:59,300 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:09:59,302 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:00,001 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:00,003 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:00,691 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:00,694 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:01,620 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:01,624 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:02,331 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:02,334 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:02,983 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:02,985 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:03,666 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:03,669 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:04,319 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:04,321 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:04,984 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:04,986 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:05,668 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:05,670 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:06,399 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:06,402 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:07,071 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:07,077 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:07,725 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:07,728 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:08,437 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:08,440 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:09,110 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:09,113 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:09,801 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:09,804 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:10,589 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:10,592 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:11,384 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:11,387 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:12,033 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:12,036 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:12,670 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:12,673 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:13,360 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:13,364 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:13,382 - INFO - Processed 100 frames
+2025-05-25 00:10:14,036 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:14,038 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:14,739 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:14,741 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:15,441 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:15,444 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:16,102 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:16,105 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:16,788 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:16,791 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:17,442 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:17,446 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:18,144 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:18,146 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:27,030 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:27,708 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:28,364 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:29,054 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:29,825 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-25 00:10:29,854 - INFO - Quit command received
+2025-05-25 00:10:29,854 - INFO - Cleaning up resources...
+2025-05-25 00:10:30,031 - INFO - Monitoring stopped
+2025-05-30 12:48:10,349 - INFO - Starting Density Monitor...
+2025-05-30 12:48:10,349 - INFO - Loading YOLO model on cpu...
+2025-05-30 12:48:10,547 - INFO - ✅ YOLO model loaded on CPU
+2025-05-30 12:48:10,548 - INFO - Skipping model compilation to avoid Dynamo issues
+2025-05-30 12:48:10,548 - INFO - Initializing DeepSort tracker...
+2025-05-30 12:48:10,747 - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-05-30 12:48:10,747 - INFO - - gpu enabled: False
+2025-05-30 12:48:10,747 - INFO - - half precision: False
+2025-05-30 12:48:10,747 - INFO - - max batch size: 16
+2025-05-30 12:48:10,747 - INFO - - expects BGR: True
+2025-05-30 12:48:10,815 - INFO - DeepSort Tracker initialised
+2025-05-30 12:48:10,816 - INFO - - max age: 50
+2025-05-30 12:48:10,816 - INFO - - appearance threshold: 0.4
+2025-05-30 12:48:10,816 - INFO - - nms threshold: OFF
+2025-05-30 12:48:10,816 - INFO - - max num of appearance features: 100
+2025-05-30 12:48:10,816 - INFO - - overriding track class : No
+2025-05-30 12:48:10,816 - INFO - - today given : No
+2025-05-30 12:48:10,816 - INFO - - in-build embedder : Yes
+2025-05-30 12:48:10,816 - INFO - - polygon detections : No
+2025-05-30 12:48:10,816 - INFO - ✅ DeepSort tracker initialized
+2025-05-30 12:48:10,816 - INFO - Loading CSONet model...
+2025-05-30 12:48:10,832 - WARNING - ⚠️ CSONet loading failed, using YOLO-only mode: PytorchStreamReader failed locating file constants.pkl: file not found
+2025-05-30 12:48:10,833 - INFO - ✅ CSV logging initialized
+2025-05-30 12:48:10,833 - INFO - Opening video source: 0
+2025-05-30 12:48:14,267 - INFO - 🚀 Starting occlusion-aware monitoring...
+2025-05-30 12:48:27,288 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:27,973 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:27,973 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:28,604 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:28,604 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:29,725 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:29,726 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:30,428 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:30,428 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:31,427 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:31,427 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:31,428 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:32,830 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:32,830 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:33,960 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:33,960 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:33,960 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:34,624 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:34,624 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:34,624 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:35,329 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:35,329 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:35,329 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:36,400 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:36,400 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:36,400 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:37,048 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:37,048 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:37,048 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:37,685 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:37,686 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:37,686 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:38,349 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:38,350 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:38,350 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:38,987 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:38,989 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:38,989 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:39,607 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:39,609 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:39,609 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:40,253 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:40,253 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:40,254 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:40,901 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:40,901 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:40,901 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:41,564 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:41,564 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:41,564 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:42,252 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:42,252 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:42,252 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:42,252 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,091 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,091 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,091 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,091 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,679 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,679 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,679 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:43,679 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:44,369 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:44,369 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:44,369 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:44,369 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:45,210 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:45,210 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:45,210 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:45,983 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:45,983 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:45,984 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:46,639 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:46,639 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:46,640 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:46,640 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:46,658 - INFO - Processed 100 frames
+2025-05-30 12:48:47,300 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:47,300 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:47,301 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:47,301 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,022 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,022 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,023 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,023 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,738 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,738 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,738 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:48,738 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:49,464 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:49,464 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:49,464 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:49,464 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:49,464 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:50,785 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:51,469 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:51,469 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:51,469 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:51,469 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:51,469 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,053 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,053 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,053 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,054 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,054 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,664 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,664 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,664 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,665 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:52,665 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,284 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,284 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,284 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,284 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,284 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,910 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,910 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,910 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,910 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:53,910 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:54,513 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:54,513 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:54,513 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:54,513 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:54,513 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,156 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,156 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,156 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,156 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,156 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,804 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,804 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,804 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,804 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:55,804 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:56,447 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:56,447 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:56,447 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:56,447 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:56,447 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,106 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,107 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,107 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,107 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,107 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,749 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,749 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,750 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,750 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:57,750 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:58,425 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:58,425 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:58,425 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:58,425 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:58,425 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,130 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,784 - WARNING - Track processing failed: float() argument must be a string or a real number, not 'NoneType'
+2025-05-30 12:48:59,804 - INFO - Quit command received
+2025-05-30 12:48:59,804 - INFO - Cleaning up resources...
+2025-05-30 12:48:59,899 - INFO - Monitoring stopped
